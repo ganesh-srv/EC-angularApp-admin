@@ -1,0 +1,34 @@
+
+@mixin crm-glimpse($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    
+    .sidenav{
+        background: mat-color($primary,400);    
+        position: relative;
+        width: 250px;
+        overflow: hidden !important;
+    }
+    .drawer{
+        background: mat-color($primary,400);    
+        position: relative;
+        width: 80px;
+    }
+    .router-outlet{
+        position: relative;padding: 0px 5px;
+    }
+    .spacer {
+        width: 100%;
+    }
+
+    .logo{
+        font-size: 50px;font-family: Roboto;color:rgb(0, 0, 0);margin-top: 8px; font-weight:bold;
+    }
+
+    .mat-drawer-inner-container {
+        overflow: hidden !important;
+    }
+}
+
