@@ -6,6 +6,7 @@
 // @import '../app/dashboard-widget/dashcard/dashcard.component.scss';
 // @import '../app/dashboard-widget/profile-card/profile-card.component.scss';
 // @import '../app/dashboard-widget/round-progressbar/round-progressbar.component.scss';
+@import '../app/widgets/round-graph/round-graph.component.scss';
 // @import '../app/dashboard-widget/sales-list/sales-list.component.scss';
 
 $mat-light-theme-background: (
@@ -70,7 +71,7 @@ cdk-dashcard {
 // }
 @include angular-material-theme($cdk-theme);
 @include crm-glimpse($cdk-theme);
-// @include round-progressbar($cdk-theme);
+@include round-progressbar($cdk-theme);
 // @include sales-list($cdk-theme);
 
 html {
