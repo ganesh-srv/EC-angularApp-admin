@@ -19,6 +19,7 @@ import { DoughnutGraphComponent } from './doughnut-graph/doughnut-graph.componen
 import { LocationCardComponent } from './location-card/location-card.component';
 import { RoundGraphComponent } from './round-graph/round-graph.component';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { LocationCardService } from './location-card/location-card.service';
 
 
 @NgModule({
@@ -36,6 +37,9 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
     Ng2OdometerModule,
     FlexLayoutModule,
     MatCardModule,
+  ],
+  providers: [
+    LocationCardService
   ],
   // tslint:disable-next-line:max-line-length
   declarations: [DashCardComponent, LineGraphComponent, LocationCardComponent, RoundGraphComponent, BarGraphComponent, WidgetsComponent, DoughnutGraphComponent, RoundGraphComponent],
