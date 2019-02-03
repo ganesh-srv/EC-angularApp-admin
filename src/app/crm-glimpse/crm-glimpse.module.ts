@@ -21,9 +21,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild([
-            { path: 'Crm-Glimpse', component: CrmGlimpseComponent, pathMatch: 'full' }
-        ]),
         PerfectScrollbarModule,
         MatToolbarModule,
         CoreModule,
