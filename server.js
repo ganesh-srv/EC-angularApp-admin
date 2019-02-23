@@ -1,12 +1,17 @@
+
+//Install express server
 const express = require('express');
-path = require('path');
+const path = require('path');
+ 
 const app = express();
-app.use(express.static('./dist/ec-angular-app-admin'));
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/dist/ec-angular-app-admin/index.html'));
-
+ 
+// Serve only the static files form the angularapp directory
+app.use(express.static(__dirname + '/angularapp'));
+ 
+app.get('/*', function(req,res) {
+ 
+res.sendFile(path.join(__dirname+'/angularapp/index.html'));
 });
-app.listen(8080, () => {
-    console.log('server started');
-
-})
+ 
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
